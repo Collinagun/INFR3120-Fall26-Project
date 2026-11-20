@@ -8,24 +8,48 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-
     <header>
         <h1>Book Borrowing Library</h1>
         <p>Find your next favorite book!</p>
     </header>
 
     <%- include('partials/navbar') %>
-
     <main class="catalogue-content">
         <h2><%= genre %> Books</h2>
         <p>Explore books in the <%= genre %> category.</p>
 
         <div class="genre-grid">
-            <div class="genre-card"><%= genre %>Book 1</div>
-            <div class="genre-card"><%= genre %>Book 2</div>
-            <div class="genre-card"><%= genre %>Book 3</div>
-        </div>
+            <% if (books.length > 0) { %>
+                <% books.forEach(function(book) { %>
+                    <div class="genre-card book-card">
 
+                        <h3><%= book.title %></h3>
+
+                        <p>
+                            <strong>Author:</strong>
+                            <%= book.author %>
+                        </p>
+
+                        <p>
+                            <strong>Year:</strong>
+                            <%= book.year %>
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <%= book.available ? 'Available' : 'Unavailable' %>
+                        </p>
+                        <a href="/book/<%= book.id %>"
+                           class="borrow-button">
+                            View Details
+                        </a>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p>No books found in this category.</p>
+            <% } %>
+
+        </div>
         <p>
             <a href="/genre" class="borrow-button">
                 Back to Genres
@@ -34,7 +58,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Book Borrowing Library</p>
+        <p>&copy; 2026 Book Borrowing Library.</p>
     </footer>
 
 </body>

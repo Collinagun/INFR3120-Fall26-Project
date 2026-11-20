@@ -16,32 +16,49 @@
     </header>
 
     <%- include('partials/navbar')%>
-    <main class="book-content">
-      <h2>Book Details</h2>
 
-      <div class="book-layout">
-        <div class="book-cover">
-          <span>Book Cover</span>
-        </div>
+<main class="book-content">
+  <h2>Book Details</h2>
 
-        <div class="book-information">
-          <h3>Book Title</h3>
-          <p><strong>Author:</strong> Example Author</p>
-          <p><strong>Genre:</strong> Fiction</p>
-          <p><strong>Availability:</strong> Available</p>
+  <div class="book-layout">
+    <div class="book-cover">
+      <span>Book Cover</span>
+    </div>
+    <div class="book-information">
 
-          <p>
-            Discover more about this book and
-            borrow it from our library.
-          </p>
+      <h3><%= book.title %></h3>
 
-          <a href="/checkout" class="borrow-button">
-              Borrow Book
+      <p><strong>Author:</strong> <%= book.author %></p>
+      <p><strong>Genre:</strong> <%= genreName %></p>
+      <p><strong>Published:</strong> <%= book.year %></p>
+
+      <p>
+        <strong>Availability:</strong>
+        <%= book.available ? 'Available' : 'Borrowed' %>
+      </p>
+
+      <h4>About This Book</h4>
+
+      <p><%= book.description %></p>
+
+      <div class="book-actions">
+        <% if (book.available) { %>
+          <a href="/checkout?bookId=<%= book.id %>"
+             class="borrow-button">
+            Borrow Book
           </a>
-        </div>
+        <% } %>
+
+        <a href="/books/<%= book.genre %>"
+           class="back-button">
+          Back to <%= genreName %>
+        </a>
       </div>
-    </main>
-    
+    </div>
+
+  </div>
+  </main>
+
     <footer>
       <p>&copy; 2026 Book Borrowing Library.</p>
     </footer>
