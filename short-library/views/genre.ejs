@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Catalogue</title>
+    <link rel="stylesheet" 
+          href="/stylesheets/style.css" >
   </head>
   <body>
+    <header>
+      <h1>Book Borrowing Library</h1>
+      <p>Find your next favorite book!</p>
+    </header>
+
     <%- include('partials/navbar')%>
-    <h1><%= title %></h1>
-    <p>This is the page for book genres</p>
+    <main class="catalogue-content">
+      <h2>Book Catalogue</h2>
+
+      <input
+        type="search"
+        id="book-search"
+        placeholder="Search for a book..."
+        aria-label="Search for a book"
+      >
+      <h3>Browse by Genre</h3>
+
+      <div class="genre-grid">
+           <a href="/books/fiction" class="genre-card">Fiction</a>
+           <a href="/books/mystery" class="genre-card">Mystery</a>
+           <a href="/books/romance" class="genre-card">Romance</a>
+           <a href="/books/science-fiction" class="genre-card">Science Fiction</a>
+           <a href="/books/fantasy" class="genre-card">Fantasy</a>
+           <a href="/books/non-fiction" class="genre-card">Non-Fiction</a>
+      </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Book Borrowing Library.</p>
+    </footer>
   </body>
 </html>

@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Details</title>
+    <link rel="stylesheet" 
+          href="/stylesheets/style.css">
   </head>
   <body>
+    <header>
+      <h1>Book Borrowing Library</h1>
+      <p>Find your next favorite book!</p>
+    </header>
+
     <%- include('partials/navbar')%>
-    <h1><%= title %></h1>
-    <p>This page is for book selection</p>
+    <main class="book-content">
+      <h2>Book Details</h2>
+
+      <div class="book-layout">
+        <div class="book-cover">
+          <span>Book Cover</span>
+        </div>
+
+        <div class="book-information">
+          <h3>Book Title</h3>
+          <p><strong>Author:</strong> Example Author</p>
+          <p><strong>Genre:</strong> Fiction</p>
+          <p><strong>Availability:</strong> Available</p>
+
+          <p>
+            Discover more about this book and
+            borrow it from our library.
+          </p>
+
+          <a href="/checkout" class="borrow-button">
+              Borrow Book
+          </a>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Book Borrowing Library.</p>
+    </footer>
   </body>
 </html>

@@ -1,45 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/Content/app.css' />
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title><%= title%> | Book Borrowing Library</title>
+    <link rel="stylesheet" 
+          href="/stylesheets/style.css" >
   </head>
   <body>
+    <header>
+      <h1>Book Borrowing Library</h1>
+      <p>Find your next favorite book!</p>
+    </header>
+
     <%- include('partials/navbar')%>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">INFR3120</a>
-          <button class="btn-icon navbar-toggler" type="button" 
-          data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" 
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="drawer-body mb-2 md:mb-0">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <% if title=="Home" %>
-                      <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/aboutus"><i class="fa-solid fa-info"></i> About us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/products"> <i class="fa-brands fa-elementor"></i> Products</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/services"> <i class="fa-solid fa-gear"></i> Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/contactus"> <i class="fa-solid fa-phone"></i> Contact us</a>
-                </li>
-            </div>
-        </div>
-    </nav>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <main class="home-content">
+      <h2>Welcome to Our Library</h2>
+
+      <p>
+        Explore different book genres,
+        discover new books, and find 
+        your next great read.
+      </p>
+
+      <a href="/genre" class="start-button">
+         Start Browsing Books
+      </a>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Book Borrowing Library.</p>
+    </footer>
   </body>
-  <script src="/Script/app.js"></script>
 </html>
