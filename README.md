@@ -9,12 +9,13 @@ http://localhost:3000/
 ## GitHub Repository
 https://github.com/Collinagun/INFR3120-Fall26-Project
 
+
 ## Pages
 - index.ejs - Home page
 - genre.ejs - Page to pick out book genres
 - books.ejs - Page that shows selection of books in a picked genre (May need a rename like book selection)
 - book.eks - Page that correlates to specific books, displayed through a page for now
-- checkout.ejs - Page to borrow a book, 'Book Title' field can be filled out after clicking on a book's corresponding Borrow Book
+- checkout.ejs - Page to borrow a book, 'Book Title' field can be filled out after clicking on a book's corresponding 'Borrow Book' Button
 
 
 ## Citations
