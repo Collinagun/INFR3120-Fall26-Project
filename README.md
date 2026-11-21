@@ -20,9 +20,14 @@ https://github.com/Collinagun/INFR3120-Fall26-Project
 
 ## Citations
 
-[Insert citations for code if need be here]
+W3Schools. “CSS Grid Layout.” W3schools.Com, 2019, https://www.w3schools.com/css/css_grid.asp. Accessed 20 Nov. 2026.
 
-Most if not all code is from the lectures.
+W3SCHOOLS. “CSS Tutorial.” W3schools.Com, 2019, https://www.w3schools.com/css/. Accessed 20 Nov. 2026.
+
+W3Schools. “Node.Js Tutorial.” W3schools.Com, 2019, https://www.w3schools.com/nodejs/. Accessed 20 Nov. 2026.
+
+
+Most if not all the code come from the lectures.
 
 
 Collin Chiong (collin.chiong@ontariotechu.net)
