@@ -9,6 +9,9 @@ http://localhost:3000/
 ## GitHub Repository
 https://github.com/Collinagun/INFR3120-Fall26-Project
 
+## Live Link
+https://infr3120-fall26-project-sb06.onrender.com
+
 
 ## Pages
 - index.ejs - Home page
