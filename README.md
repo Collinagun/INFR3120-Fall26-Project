@@ -1,7 +1,7 @@
 # Library Website
 ## INFR3120 Final Project Part 1
 
-A 5 page website built using express generator with semantic HTML5 and CSS3.
+A 5 page website built using express generator (includes ejs, css, js files)
 
 ## Server 
 http://localhost:3000/
